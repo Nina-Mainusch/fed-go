@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Println("Hello federated GO!")
+
+	data := ReadData("../data/data.csv")
+	coordinates := ExtractCoordinates(data)
+	fmt.Printf("%+v\n", coordinates)
 }
